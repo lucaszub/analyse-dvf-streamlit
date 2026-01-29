@@ -34,6 +34,8 @@ def get_dep() -> pd.DataFrame:
         kpis_dep = db.query(GOLD_KPI_DEPARTEMENT).all()
         data_dep = [
             {
+                "code_departement": row.code_departement,
+                "nom_departement": row.nom_departement,
                 "annee": row.annee,
                 "prix_median_m2": row.prix_median_m2,
                 "nb_ventes": row.nb_ventes,
