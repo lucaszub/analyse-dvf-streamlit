@@ -2,6 +2,9 @@
 
 Dashboard Streamlit pour analyser les données DVF (Demandes de Valeurs Foncières) - prix immobiliers en France.
 
+<img width="1713" height="1296" alt="image" src="https://github.com/user-attachments/assets/494f819b-b2a4-47aa-843e-67e761be9dad" />
+
+
 ## Fonctionnalités
 
 - Carte choroplèthe interactive des prix médians par département
