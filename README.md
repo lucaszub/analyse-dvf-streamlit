@@ -2,7 +2,8 @@
 
 Dashboard Streamlit pour analyser les données DVF (Demandes de Valeurs Foncières) - prix immobiliers en France.
 
-<img width="1713" height="1296" alt="image" src="https://github.com/user-attachments/assets/494f819b-b2a4-47aa-843e-67e761be9dad" />
+<img width="1660" height="1275" alt="image" src="https://github.com/user-attachments/assets/55f2ee3f-03bd-4c2e-afd8-ffb52aa7e24c" />
+
 
 
 ## Fonctionnalités
