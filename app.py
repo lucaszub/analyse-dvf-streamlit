@@ -43,9 +43,9 @@ with st.sidebar:
 # Agrégation par département (toutes années)
 df_dep_agg = df_dep.groupby("code_departement").agg({
     "nom_departement": "first",
-    "prix_median_m2": "mean",
-    "prix_median_appartement": "mean",
-    "prix_median_maison": "mean",
+    "prix_median_m2": "median",
+    "prix_median_appartement": "median",
+    "prix_median_maison": "median",
     "nb_ventes": "sum",
     "nb_ventes_appartement": "sum",
     "nb_ventes_maison": "sum"
@@ -92,14 +92,14 @@ else:
     nb_col_france = "nb_ventes"
 
 # KPI France selon le filtre
-prix_median_france = df_france[prix_col_france].mean()
+prix_median_france = df_france[prix_col_france].median()
 nb_ventes_france = df_france[nb_col_france].sum()
 
 # Agrégation des données France pour le tableau
 total_ventes_appt = df_france["nb_ventes_appartement"].sum()
 total_ventes_maison = df_france["nb_ventes_maison"].sum()
-prix_median_appt = df_france["prix_median_appartement"].mean()
-prix_median_maison = df_france["prix_median_maison"].mean()
+prix_median_appt = df_france["prix_median_appartement"].median()
+prix_median_maison = df_france["prix_median_maison"].median()
 
 # Création du tableau récapitulatif
 df_recap = pd.DataFrame({
@@ -111,10 +111,6 @@ df_recap = pd.DataFrame({
     "Maisons": [
         f"{total_ventes_maison:,.0f}".replace(",", " "),
         f"{prix_median_maison:,.0f} €".replace(",", " ")
-    ],
-    "Locaux": [
-        "—",
-        "—"
     ]
 })
 
